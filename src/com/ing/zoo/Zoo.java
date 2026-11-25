@@ -18,20 +18,13 @@ public class Zoo {
         commands[2] = "give meat";
         commands[3] = "perform trick";
 
-        Lion henk = new Lion();
-        henk.name = "henk";
-        Hippo elsa = new Hippo();
-        elsa.name = "elsa";
-        Pig dora = new Pig();
-        dora.name = "dora";
-        Tiger wally = new Tiger();
-        wally.name = "wally";
-        Zebra marty = new Zebra();
-        marty.name = "marty";
-        Monkey punch = new Monkey();
-        punch.name = "punch";
-        Crocodile crok = new Crocodile();
-        crok.name = "crok";
+        Lion henk = new Lion("henk");
+        Hippo elsa = new Hippo("elsa");
+        Pig dora = new Pig("dora");
+        Tiger wally = new Tiger("wally");
+        Zebra marty = new Zebra("marty");
+        Monkey punch = new Monkey("punch");
+        Crocodile crok = new Crocodile("crok");
 
         List<Animal> animals = Arrays.asList(henk, elsa, dora, wally, marty, punch, crok);
 
@@ -45,7 +38,7 @@ public class Zoo {
             boolean found = false;
             for(Animal animal : animals)
             {
-                if(name.isEmpty() || animal.name.equalsIgnoreCase(name))
+                if(name.isEmpty() || animal.getName().equalsIgnoreCase(name))
                 {
                     animal.sayHello();
                     found = true;

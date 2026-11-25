@@ -5,23 +5,19 @@ import com.ing.zoo.TrickPerformer;
 import java.util.Random;
 
 public class Zebra extends Animal implements Herbivore, TrickPerformer {
-    public String eatText;
-    public String trick;
-
-    public Zebra()
+    public Zebra(String name)
     {
+        super(name);
     }
 
     public void sayHello()
     {
-        helloText = "zebra zebra";
-        say(helloText);
+        say("zebra zebra");
     }
 
     public void eatLeaves()
     {
-        eatText = "munch munch zank yee bra";
-        say(eatText);
+        say("munch munch zank yee bra");
     }
 
     public void performTrick()
@@ -30,12 +26,11 @@ public class Zebra extends Animal implements Herbivore, TrickPerformer {
         int rnd = random.nextInt(2);
         if(rnd == 0)
         {
-            trick = "does a front flip";
+            say("does a front flip");
         }
         else
         {
-            trick = "does a back flip";
+            say("does a back flip");
         }
-        say(trick);
     }
 }

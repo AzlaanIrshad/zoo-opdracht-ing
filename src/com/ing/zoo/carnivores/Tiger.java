@@ -6,23 +6,19 @@ import com.ing.zoo.TrickPerformer;
 import java.util.Random;
 
 public class Tiger extends Animal implements Carnivore, TrickPerformer {
-    public String eatText;
-    public String trick;
-
-    public Tiger()
+    public Tiger(String name)
     {
+        super(name);
     }
 
     public void sayHello()
     {
-        helloText = "rraaarww";
-        say(helloText);
+        say("rraaarww");
     }
 
     public void eatMeat()
     {
-        eatText = "nomnomnom rawr wubalubadubdub";
-        say(eatText);
+        say("nomnomnom rawr wubalubadubdub");
     }
 
     public void performTrick()
@@ -31,12 +27,11 @@ public class Tiger extends Animal implements Carnivore, TrickPerformer {
         int rnd = random.nextInt(2);
         if(rnd == 0)
         {
-            trick = "jumps in tree";
+            say("jumps in tree");
         }
         else
         {
-            trick = "scratches ears";
+            say("scratches ears");
         }
-        say(trick);
     }
 }

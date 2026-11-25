@@ -6,23 +6,19 @@ import com.ing.zoo.TrickPerformer;
 import java.util.Random;
 
 public class Crocodile extends Animal implements Carnivore, TrickPerformer {
-    public String eatText;
-    public String trick;
-
-    public Crocodile()
+    public Crocodile(String name)
     {
+        super(name);
     }
 
     public void sayHello()
     {
-        helloText = "snap snap";
-        say(helloText);
+        say("snap snap");
     }
 
     public void eatMeat()
     {
-        eatText = "chomp chomp gulp";
-        say(eatText);
+        say("chomp chomp gulp");
     }
 
     public void performTrick()
@@ -31,12 +27,11 @@ public class Crocodile extends Animal implements Carnivore, TrickPerformer {
         int rnd = random.nextInt(2);
         if(rnd == 0)
         {
-            trick = "does a death roll";
+            say("does a death roll");
         }
         else
         {
-            trick = "lies still like a log";
+            say("lies still like a log");
         }
-        say(trick);
     }
 }

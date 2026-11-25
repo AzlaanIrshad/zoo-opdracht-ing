@@ -1,8 +1,17 @@
 package com.ing.zoo;
 
 public abstract class Animal {
-    public String name;
-    public String helloText;
+    private final String name;
+
+    protected Animal(String name)
+    {
+        this.name = name;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
 
     public abstract void sayHello();
 

@@ -1,8 +1,12 @@
 package com.ing.zoo;
 
+import com.ing.zoo.carnivores.*;
+import com.ing.zoo.herbivores.*;
+import com.ing.zoo.omnivores.*;
+
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
+
 import java.util.Scanner;
 
 public class Zoo {
@@ -46,6 +50,26 @@ public class Zoo {
             if(!found)
             {
                 System.out.println("Unknown animal: " + name);
+            }
+        }
+        else if(input.equals(commands[1]))
+        {
+            for(Animal animal : animals)
+            {
+                if(animal instanceof Herbivore)
+                {
+                    ((Herbivore) animal).eatLeaves();
+                }
+            }
+        }
+        else if(input.equals(commands[2]))
+        {
+            for(Animal animal : animals)
+            {
+                if(animal instanceof Carnivore)
+                {
+                    ((Carnivore) animal).eatMeat();
+                }
             }
         }
         else

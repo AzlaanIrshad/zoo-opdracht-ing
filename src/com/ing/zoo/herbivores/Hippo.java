@@ -1,6 +1,8 @@
-package com.ing.zoo;
+package com.ing.zoo.herbivores;
 
-public class Hippo extends Animal {
+import com.ing.zoo.Animal;
+
+public class Hippo extends Animal implements Herbivore {
     public String eatText;
 
     public Hippo()

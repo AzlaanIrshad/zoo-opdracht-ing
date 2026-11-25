@@ -5,4 +5,9 @@ public abstract class Animal {
     public String helloText;
 
     public abstract void sayHello();
+
+    protected void say(String text)
+    {
+        System.out.println(name + ": " + text);
+    }
 }

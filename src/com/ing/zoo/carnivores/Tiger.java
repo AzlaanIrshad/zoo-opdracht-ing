@@ -1,10 +1,11 @@
 package com.ing.zoo.carnivores;
 
 import com.ing.zoo.Animal;
+import com.ing.zoo.TrickPerformer;
 
 import java.util.Random;
 
-public class Tiger extends Animal implements Carnivore {
+public class Tiger extends Animal implements Carnivore, TrickPerformer {
     public String eatText;
     public String trick;
 
@@ -15,13 +16,13 @@ public class Tiger extends Animal implements Carnivore {
     public void sayHello()
     {
         helloText = "rraaarww";
-        System.out.println(helloText);
+        say(helloText);
     }
 
     public void eatMeat()
     {
-        eatText = "nomnomnom oink wubalubadubdub";
-        System.out.println(eatText);
+        eatText = "nomnomnom rawr wubalubadubdub";
+        say(eatText);
     }
 
     public void performTrick()
@@ -36,6 +37,6 @@ public class Tiger extends Animal implements Carnivore {
         {
             trick = "scratches ears";
         }
-        System.out.println(trick);
+        say(trick);
     }
 }

@@ -1,10 +1,11 @@
 package com.ing.zoo.omnivores;
 
 import com.ing.zoo.Animal;
+import com.ing.zoo.TrickPerformer;
 
 import java.util.Random;
 
-public class Pig extends Animal implements Omnivore {
+public class Pig extends Animal implements Omnivore, TrickPerformer {
     public String eatText;
     public String trick;
 
@@ -14,20 +15,20 @@ public class Pig extends Animal implements Omnivore {
 
     public void sayHello()
     {
-        helloText = "splash";
-        System.out.println(helloText);
+        helloText = "oink";
+        say(helloText);
     }
 
     public void eatLeaves()
     {
         eatText = "munch munch oink";
-        System.out.println(eatText);
+        say(eatText);
     }
 
     public void eatMeat()
     {
         eatText = "nomnomnom oink thx";
-        System.out.println(eatText);
+        say(eatText);
     }
 
     public void performTrick()
@@ -42,6 +43,6 @@ public class Pig extends Animal implements Omnivore {
         {
             trick = "runs in circles";
         }
-        System.out.println(trick);
+        say(trick);
     }
 }

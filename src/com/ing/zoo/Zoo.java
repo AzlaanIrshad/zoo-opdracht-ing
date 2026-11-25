@@ -28,8 +28,12 @@ public class Zoo {
         wally.name = "wally";
         Zebra marty = new Zebra();
         marty.name = "marty";
+        Monkey punch = new Monkey();
+        punch.name = "punch";
+        Crocodile crok = new Crocodile();
+        crok.name = "crok";
 
-        List<Animal> animals = Arrays.asList(henk, elsa, dora, wally, marty);
+        List<Animal> animals = Arrays.asList(henk, elsa, dora, wally, marty, punch, crok);
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
@@ -69,6 +73,16 @@ public class Zoo {
                 if(animal instanceof Carnivore)
                 {
                     ((Carnivore) animal).eatMeat();
+                }
+            }
+        }
+        else if(input.equals(commands[3]))
+        {
+            for(Animal animal : animals)
+            {
+                if(animal instanceof TrickPerformer)
+                {
+                    ((TrickPerformer) animal).performTrick();
                 }
             }
         }

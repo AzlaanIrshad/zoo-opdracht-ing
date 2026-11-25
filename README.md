@@ -35,3 +35,11 @@ Bij elke command laat je het resultaat in de console  zien.
 - Als je de [give leaves] command uitvoert krijgen alle herbivores leaves.
 - Als je de [give meat] command uitvoert krijgen alle carnivores meat.
 - Als je de [perform trick] command uitvoert doen alle dieren die dat kunnen hun trucje.
+---
+## Uitwerking
+- `Animal`: abstracte basisklasse (naam via constructor).
+- `Herbivore`, `Carnivore`, `Omnivore` en `TrickPerformer`: interfaces.
+- De dieren staan in de packages `carnivores`, `herbivores` en `omnivores`.
+- Nieuwe dieren: Monkey (omnivoor) en Crocodile (carnivoor).
+
+Run `Zoo.main()` en typ een command: `hello`, `hello [naam]`, `give leaves`, `give meat` of `perform trick`.

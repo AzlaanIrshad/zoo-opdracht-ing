@@ -2,9 +2,7 @@ package com.ing.zoo;
 
 import java.util.Random;
 
-public class Pig {
-    public String name;
-    public String helloText;
+public class Pig extends Animal {
     public String eatText;
     public String trick;
 
